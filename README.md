@@ -13,7 +13,7 @@
 
 #### 实现完成页面
 - 商品展示页面
-<img src="https://github.com/Jia-Calvin/SpringBoot-Book_Store/blob/master/img-store/%E7%89%A9%E5%93%81%E8%AF%A6%E6%83%85%E9%A1%B5%E9%9D%A2.png" width="800px">" width="800px">
+<img src="https://github.com/Jia-Calvin/SpringBoot-Book_Store/blob/master/img-store/%E5%95%86%E5%93%81%E5%B1%95%E7%A4%BA%E9%A1%B5%E9%9D%A2.png" width="800px">" width="800px">
 
 - 商品详情页面
 <img src="https://github.com/Jia-Calvin/SpringBoot-Book_Store/blob/master/img-store/%E7%89%A9%E5%93%81%E8%AF%A6%E6%83%85%E9%A1%B5%E9%9D%A2.png" width="800px">
