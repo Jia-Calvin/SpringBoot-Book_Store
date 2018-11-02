@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>User Register</title>
+    <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+    <meta name="author" content="Vincent Garreau"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" media="screen" href="register/css/style.css">
+    <link rel="stylesheet" type="text/css" href="register/css/reset.css"/>
+</head>
+<body>
+
+<div id="particles-js-register">
+    <div class="register">
+        <div class="register-top">
+            注册
+        </div>
+        <div class="register-center clearfix">
+            <div class="register-center-img"><img src="register/img/name.png"/></div>
+            <div class="register-center-input">
+                <input id="username" type="text" name="username" value="" placeholder="请输入您的账号"
+                       onfocus="this.placeholder=''"
+                       onblur="this.placeholder='请输入您的账号'" />
+                <div class="register-center-input-text">账号</div>
+            </div>
+        </div>
+        <div class="register-center clearfix">
+            <div class="register-center-img"><img src="register/img/password.png"/></div>
+            <div class="register-center-input">
+                <input id="password" type="password" name="password" value="" placeholder="请输入您的密码"
+                       onfocus="this.placeholder=''"
+                       onblur="this.placeholder='请输入您的密码'"/>
+                <div class="register-center-input-text">密码</div>
+            </div>
+        </div>
+        <div class="register-center clearfix">
+            <div class="register-center-img"><img src="register/img/gender.jpg"/></div>
+            <div class="register-center-input">
+                <input id="gender" type="text" name="gender" value=""
+                       placeholder="请输入您的性别"
+                       onfocus="this.placeholder=''"
+                       onblur="this.placeholder='请输入您的性别'"/>
+                <div class="register-center-input-text">性别</div>
+            </div>
+        </div>
+        <div class="register-center clearfix">
+            <div class="register-center-img"><img src="register/img/email.jpg"/></div>
+            <div class="register-center-input">
+                <input id="email" type="text" name="email" value="" placeholder="请输入您的邮箱地址"
+                       onfocus="this.placeholder=''"
+                       onblur="this.placeholder='请输入您的邮箱地址'"/>
+                <div class="register-center-input-text">邮箱地址</div>
+            </div>
+        </div>
+        <div class="register-center clearfix">
+            <div class="register-center-img"><img src="register/img/telephone.jpg"/></div>
+            <div class="register-center-input">
+                <input id="telephone" type="text" name="telephone" value="" placeholder="请输入您的电话号码"
+                       onfocus="this.placeholder=''"
+                       onblur="this.placeholder='请输入您的电话号码'"/>
+                <div class="register-center-input-text">电话号码</div>
+            </div>
+        </div>
+        <div class="register-center clearfix">
+            <div class="register-center-img"><img src="register/img/address.jpg"/></div>
+            <div class="register-center-input">
+                <input id="address" type="text" name="address" value="" placeholder="请输入您的收货地址"
+                       onfocus="this.placeholder=''"
+                       onblur="this.placeholder='请输入您的收货地址'"/>
+                <div class="register-center-input-text">收货地址</div>
+            </div>
+        </div>
+        <div class="register-button">
+            确认
+        </div>
+    </div>
+    <div class="sk-rotating-plane"></div>
+</div>
+
+<!-- scripts -->
+<script src="register/js/particles.min.js"></script>
+<script src="register/js/app.js"></script>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+    function hasClass(elem, cls) {
+        cls = cls || '';
+        if (cls.replace(/\s/g, '').length == 0) return false; //当cls没有参数时，返回false
+        return new RegExp(' ' + cls + ' ').test(' ' + elem.className + ' ');
+    }
+
+    function addClass(ele, cls) {
+        if (!hasClass(ele, cls)) {
+            ele.className = ele.className == '' ? cls : ele.className + ' ' + cls;
+        }
+    }
+
+    function removeClass(ele, cls) {
+        if (hasClass(ele, cls)) {
+            var newClass = ' ' + ele.className.replace(/[\t\r\n]/g, '') + ' ';
+            while (newClass.indexOf(' ' + cls + ' ') >= 0) {
+                newClass = newClass.replace(' ' + cls + ' ', ' ');
+            }
+            ele.className = newClass.replace(/^\s+|\s+$/g, '');
+        }
+    }
+
+    document.querySelector(".register-button").onclick = function () {
+        $.ajax({
+            url: "/register/confirm",
+            type: "POST",
+            data: {
+                username: $("#username")[0].value,
+                password: $("#password")[0].value,
+                gender: $("#gender")[0].value,
+                email: $("#email")[0].value,
+                telephone: $("#telephone")[0].value,
+                address: $("#address")[0].value
+            },
+            success: function (data) {
+                if (data.toString() == "true") {
+                    alert("注册成功，请登录");
+                    window.location.replace("/login");
+                }
+                else {
+                    alert("注册失败，请重新注册");
+                    window.location.replace("/login");
+                }
+            }
+        })
+        addClass(document.querySelector(".login"), "active");
+        setTimeout(function () {
+            addClass(document.querySelector(".sk-rotating-plane"), "active");
+            document.querySelector(".login").style.display = "none"
+        }, 800)
+        // setTimeout(function () {
+        //     removeClass(document.querySelector(".login"), "active")
+        //     removeClass(document.querySelector(".sk-rotating-plane"), "active")
+        //     document.querySelector(".login").style.display = "block"
+        //     alert("登录失败")
+        // }, 5000)
+    }
+
+
+</script>
+</body>
+</html>

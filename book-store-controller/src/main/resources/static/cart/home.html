@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>在线购书中心</title>
+    <link href="/cart/css/public.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/cart/css/base.css"/>
+    <script type="text/javascript" src="/cart/js/jquery_cart.js"></script>
+    <link rel="stylesheet" type="text/css" href="/cart/css/checkOut.css"/>
+</head>
+
+<body>
+<!--顶部快捷菜单-->
+<div class="shortcut_v2013 alink_v2013">
+    <div class="w">
+        <ul class="fl 1h">
+            <li class="fl">
+                <div class="menu_hd"><a href="/login" id="login">请登录</a></div>
+            </li>
+            <li class="fl"><i class="shortcut_s"></i></li>
+            <li class="fl">
+                <div class="menu_hd"><a href="/register">免费注册</a></div>
+            </li>
+            <li class="fl"><i class="shortcut_s"></i></li>
+            <li class="fl">
+                <div class="menu_hd"><a href="/">购书中心</a></div>
+            </li>
+        </ul>
+        <ul class="fr 1h">
+            <li class="fl">
+                <div class="menu_hd"><a href="/logout" id="logout" hidden>退出账户</a></div>
+            </li>
+            <li class="fl"><i class="shortcut_s"></i></li>
+            <li class="fl">
+                <div class="menu_hd"><a href="/shopping/toCart">我的购物车</a></div>
+            </li>
+            <li class="fl"><i class="shortcut_s"></i></li>
+            <li class="fl">
+                <div class="menu_hd"><a href="#">我的账户</a></div>
+            </li>
+            <li class="fl"><i class="shortcut_s"></i></li>
+            <li class="fl">
+            </li>
+        </ul>
+        <span class="clr"></span>
+    </div>
+</div>
+<!--顶部快捷菜单-->
+
+
+<!--顶部Logo及搜索-->
+<div class="header_2013">
+    <div class="w">
+        <div class="logo_v2013">
+            <a href="#">
+                <img class="border_r" src="" width="120" height="50">
+                <img src="" width="170" height="50">
+            </a>
+        </div>
+        <div class="header_searchbox">
+            <form action="#">
+                <input name="search" type="text" class="header_search_input"
+                       autocomplete="off" x-webkit-grammar="builtin:search" lang="zh">
+                <button type="submit" class="header_search_btn">搜索</button>
+            </form>
+            <ul class="hot_word">
+                <li><a class="red" href="#" target="_blank">深入分析Java web</a></li>
+                <li><a target="_blank" href="#">Spring Boot实战</a></li>
+                <li><a target="_blank" href="#">剑指Offer</a></li>
+            </ul>
+        </div>
+        <span class="clr"></span>
+    </div>
+</div>
+<!--顶部Logo及搜索-->
+
+<!--  导航条    start-->
+<div class="yHeader">
+    <div class="shop_Nav">
+        <div class="pullDown">
+            <h2 class="pullDownTitle"><i></i>
+                <li><a href="javascript:void(0)" onclick='getProduct("计算机")' style="color: #FFFFFF">全部商品分类</a></li>
+            </h2>
+        </div>
+
+        <ul class="Menu_box">
+            <li><a href="javascript:void(0)" onclick='getProduct("文学")' id="文学">文学</a></li>
+            <li><a href="javascript:void(0)" onclick='getProduct("计算机")' id="计算机">计算机</a></li>
+            <li><a href="javascript:void(0)" onclick='getProduct("外语")' id="外语">外语</a></li>
+            <li><a href="javascript:void(0)" onclick='getProduct("学术")' id="学术">学术</a></li>
+            <li><a href="javascript:void(0)" onclick='getProduct("励志")' id="励志">励志</a></li>
+            <li><a href="javascript:void(0)" onclick='getProduct("艺术")' id="艺术">艺术</a></li>
+            <li><a href="javascript:void(0)" onclick='getProduct("科技")' id="科技">科技</a></li>
+            <li><a href="javascript:void(0)" onclick='getProduct("生活")' id="生活">生活</a></li>
+        </ul>
+    </div>
+</div>
+<!--  导航条    end-->
+
+<div class="banner_red_top"></div>
+
+<div class="border_top_cart">
+    <div class="container">
+
+        <div style="width:content-box; height: 400px;padding-top: 15px" id="bookDetail">
+            <div class="bookFigure">
+                <img id="bookImgDetail" src="">
+            </div>
+            <div class="bookName">
+                <span id="bookNameDetail" style="font-weight: bold;font-size: xx-large"></span>
+            </div>
+            <div class="bookPrice">
+                <div style="width: 100%; padding: 5px 0 0 5px">  <span style="font-size: medium;">价格：
+                    <s id="bookPriceAddDetail"></s></span>
+                </div>
+                <div style="width: 100%; padding:7px 0 14px 5px">
+                        <span style="font-size: medium;">促销价：
+                    <span style="color: #FF0000;font-size: x-large" id="bookPriceDetail"></span></span>
+                </div>
+                <div style="width: 100%; padding:0 0 0 5px"><span style="font-size: medium">库存：剩余 <span
+                        style="font-size: large" id="bookQuantityDetail"></span> 件</span>
+                </div>
+            </div>
+            <div class="bookDescription">
+                    <span style="font-size: medium; padding-left: 5px; font-weight: bold">作者：
+                    <span style="font-size: medium;font-weight: normal" id="bookAuthorDetail">
+                    </span></span><br><br>
+                <span style="font-size: medium; padding-left: 5px; font-weight: bold">简介：
+                    <span style="font-size: medium;font-weight: normal" id="bookDescriptionDetail">
+                    </span></span>
+            </div>
+            <div class="bookDescription">
+                <span style="font-size: medium; padding:10px 0 0 5px; font-weight: bold">购买数量：</span>
+                <button style="font-weight: bold;font-size: small;height: 21px;width: 21px"
+                        onclick="changeQuantity(false)">-
+                </button>
+                <input id="inputQuantity" style="width: 50px;text-align: center" value="1"/>
+                <button style="font-weight: bold;font-size: small;height: 21px;width: 21px"
+                        onclick="changeQuantity(true)">+
+                </button>
+            </div>
+            <div class="bookBuy">
+                <button style="color: #FFFFFF; background-color: #FF0000;width: 200px;height: 50px;font-size:
+                    large" onclick="checkLogin('buy')">立即购买
+                </button>
+                <button style="background-color: #FFFFFF;width: 200px;height: 50px;font-size: large"
+                        onclick="addToCart()"> 加入购物车
+                </button>
+            </div>
+        </div>
+
+        <div style="width: content-box;height: 200px">
+            <div class="book" id="book1">
+                <div class="bookImgClass">
+                    <img id="bookImg1" onclick="showBookDetail('bookName1')">
+                </div>
+                <div>
+                <span>书名：<span id="bookName1" style="font-weight: bold; cursor: pointer"
+                               onclick="showBookDetail('bookName1')"></span></span><br/>
+                    <span>售价：￥<span id="bookPrice1" style="font-weight: bold"></span></span>
+                </div>
+            </div>
+            <div class="book" id="book2">
+                <div class="bookImgClass" onclick="showBookDetail('bookName2')">
+                    <img id="bookImg2">
+                </div>
+                <div>
+                <span>书名：<span id="bookName2" style="font-weight: bold; cursor: pointer"
+                               onclick="showBookDetail('bookName2')"></span></span><br/>
+                    <span>售价：￥<span id="bookPrice2" style="font-weight: bold"></span></span>
+                </div>
+            </div>
+            <div class="book" id="book3">
+                <div class="bookImgClass" onclick="showBookDetail('bookName3')">
+                    <img id="bookImg3">
+                </div>
+                <div>
+                <span>书名：<span id="bookName3" style="font-weight: bold; cursor: pointer"
+                               onclick="showBookDetail('bookName3')"></span></span><br/>
+                    <span>售价：￥<span id="bookPrice3" style="font-weight: bold"></span></span>
+                </div>
+            </div>
+            <div class="book" id="book4">
+                <div class="bookImgClass" onclick="showBookDetail('bookName4')">
+                    <img id="bookImg4">
+                </div>
+                <div>
+                <span>书名：<span id="bookName4" style="font-weight: bold; cursor: pointer"
+                               onclick="showBookDetail('bookName4')"></span></span><br/>
+                    <span>售价：￥<span id="bookPrice4" style="font-weight: bold"></span></span>
+                </div>
+            </div>
+            <div class="book" id="book5">
+                <div class="bookImgClass" onclick="showBookDetail('bookName5')">
+                    <img id="bookImg5">
+                </div>
+                <div>
+                <span>书名：<span id="bookName5" style="font-weight: bold; cursor: pointer"
+                               onclick="showBookDetail('bookName5')"></span></span><br/>
+                    <span>售价：￥<span id="bookPrice5" style="font-weight: bold"></span></span>
+                </div>
+            </div>
+            <div class="book" id="book6">
+                <div class="bookImgClass" onclick="showBookDetail('bookName6')">
+                    <img id="bookImg6">
+                </div>
+                <div>
+                <span>书名：<span id="bookName6" style="font-weight: bold; cursor: pointer"
+                               onclick="showBookDetail('bookName6')"></span></span><br/>
+                    <span>售价：￥<span id="bookPrice6" style="font-weight: bold"></span></span>
+                </div>
+            </div>
+            <div class="book" id="book7">
+                <div class="bookImgClass" onclick="showBookDetail('bookName7')">
+                    <img id="bookImg7">
+                </div>
+                <div>
+                <span>书名：<span id="bookName7" style="font-weight: bold; cursor: pointer"
+                               onclick="showBookDetail('bookName7')"></span></span><br/>
+                    <span>售价：￥<span id="bookPrice7" style="font-weight: bold"></span></span>
+                </div>
+            </div>
+            <div class="book" id="book8">
+                <div class="bookImgClass" onclick="showBookDetail('bookName8')">
+                    <img id="bookImg8">
+                </div>
+                <div>
+                <span>书名：<span id="bookName8" style="font-weight: bold; cursor: pointer"
+                               onclick="showBookDetail('bookName8')"></span></span><br/>
+                    <span>售价：￥<span id="bookPrice8" style="font-weight: bold"></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="jumpPage">
+            <a href="#">上一页</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">下一页</a>
+        </div>
+
+    </div>
+
+</div>
+<div id="bottom">
+    <div id="bottom_right">
+        <span>CONTACT US</span><br/>
+        <span>copyright 2018 &copy; Calvin All Rights RESERVED</span>
+    </div>
+</div>
+</body>
+<br><br><br><br><br><br>
+<script>
+    document.onkeydown = function (e) {
+        var currentCate;
+        var category = ["文学", "计算机", "外语", "学术", "励志", "艺术", "科技", "生活"];
+        for (var k = 0; k < category.length; k++) {
+            var bean = document.getElementById(category[k]);
+            if (bean.className == "yMenua")
+                currentCate = category[k];
+        }
+        if (e.keyCode == 8) {
+            getProduct(currentCate);
+        }
+    }
+</script>
+
+<script src="/cart/js/home.js"></script>
+<script src="/cart/js/base.min.js"></script>
+<script type="text/javascript" src="/cart/js/address_all.js"></script>
+<script type="text/javascript" src="/cart/js/checkout.min.js"></script>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="/cart/js/unslider.min.js" type="text/javascript"></script>
+<script src="/cart/js/index.js" type="text/javascript"></script>
+
+</body>
+</html>
