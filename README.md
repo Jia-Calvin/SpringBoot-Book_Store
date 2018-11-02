@@ -14,20 +14,15 @@
 - 暴露服务之间的通信(RPC通信)是利用Dubbo框架，Zookeeper为注册中心进行通信的。
 
 #### 项目完成页面
+
 - 商品展示页面
-<<<<<<< HEAD
 <img src="https://github.com/Jia-Calvin/SpringBoot-Book_Store/blob/master/img-store/%E5%95%86%E5%93%81%E5%B1%95%E7%A4%BA%E9%A1%B5%E9%9D%A2.png" width="800px">
-=======
-<img src="https://github.com/Jia-Calvin/SpringBoot-Book_Store/blob/master/img-store/%E5%95%86%E5%93%81%E5%B1%95%E7%A4%BA%E9%A1%B5%E9%9D%A2.png" width="800px">" width="800px">
->>>>>>> bd7a532c6961225952c153f30bd27b5b0387f73c
 
 - 商品详情页面
 <img src="https://github.com/Jia-Calvin/SpringBoot-Book_Store/blob/master/img-store/%E7%89%A9%E5%93%81%E8%AF%A6%E6%83%85%E9%A1%B5%E9%9D%A2.png" width="800px">
 
-
 - 订单页面
 <img src="https://github.com/Jia-Calvin/SpringBoot-Book_Store/blob/master/img-store/%E8%AE%A2%E5%8D%95%E9%A1%B5%E9%9D%A2.png" width="800px">
-
 
 ## 1 用户服务器
 
