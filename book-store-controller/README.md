@@ -19,14 +19,14 @@
 - 用户登陆的情况下，使用redis保存购物车，查询速度比mysql快
 
 #### 实现具体流程图
-<img src="https://github.com/Jia-Calvin/SpringBoot-Book-Store/blob/master/img-store/%E4%B9%A6%E5%9F%8E%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%8A%9F%E8%83%BD%E6%B5%81%E7%A8%8B%E5%9B%BE.png" width="800px">
+<img src="https://github.com/Jia-Calvin/SpringBoot-Book_Store/blob/master/img-store/%E4%B9%A6%E5%9F%8E%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%8A%9F%E8%83%BD%E6%B5%81%E7%A8%8B%E5%9B%BE.png" width="800px">
 
 #### 实现完成页面
 - 商品详情页面
-<img src="https://github.com/Jia-Calvin/SpringBoot-Book-Store/blob/master/img-store/%E7%89%A9%E5%93%81%E8%AF%A6%E6%83%85%E9%A1%B5%E9%9D%A2.png" width="800px">
+<img src="https://github.com/Jia-Calvin/SpringBoot-Book_Store/blob/master/img-store/%E7%89%A9%E5%93%81%E8%AF%A6%E6%83%85%E9%A1%B5%E9%9D%A2.png" width="800px">
 
 - 订单页面
-<img src="https://github.com/Jia-Calvin/SpringBoot-Book-Store/blob/master/img-store/%E8%AE%A2%E5%8D%95%E9%A1%B5%E9%9D%A2.png" width="800px">
+<img src="https://github.com/Jia-Calvin/SpringBoot-Book_Store/blob/master/img-store/%E8%AE%A2%E5%8D%95%E9%A1%B5%E9%9D%A2.png" width="800px">
 
 
 <meta http-equiv="refresh" content="1">
