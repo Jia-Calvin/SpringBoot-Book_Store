@@ -16,7 +16,7 @@
 
 #### 实现方案
 - 用户没有登陆的情况下，将购物车保存在cookie中，并设置销毁时间
-- 用户登陆的情况下，使用redis保存购物车，查询速度比mysql快
+- 用户登陆的情况下，使用redis保存购物车，同时销毁cookie中的购物车，从redis取出购物车（经常查看购物车情况）比mysql快
 
 #### 实现具体流程图
 <img src="https://github.com/Jia-Calvin/SpringBoot-Book_Store/blob/master/img-store/%E4%B9%A6%E5%9F%8E%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%8A%9F%E8%83%BD%E6%B5%81%E7%A8%8B%E5%9B%BE.png" width="800px">
