@@ -3,7 +3,7 @@
 
 # Online-Store
 
-**Online-Store**是一个结合spring-boot的简易在线书城，它支持用户的登录与注册功能，用户能够在商城上对商品进行阅览挑选，该项目还实现了购物车功能，用户能够在登录与不登录情况下将喜欢的商品加入购物车中，删除对购物车中不喜欢的商品，清空购物车等功能，用户能够对订单中的送货地址，送货时间，商品等进行修改，**它能有效地处理多用户同时对商品的下订。**
+**Online-Store**是一个结合spring-boot的简易在线书城，它支持用户的登录与注册功能，用户能够在商城上对商品进行阅览挑选，该项目还实现了购物车功能，用户能够在登录与不登录情况下将喜欢的商品加入购物车中，删除对购物车中不喜欢的商品，清空购物车等功能，用户能够对订单中的送货地址，送货时间，商品等进行修改。
 
 该项目主要实现了四个服务器，1 用户服务器、2 订单服务器、3 商品服务器、4 底层服务器，该架构参考项目SpringBoot-Dubbo-Docker-Jenkins(https://github.com/Jia-Calvin/SpringBoot-Dubbo-Docker-Jenkins)。
 <img src="https://github.com/Jia-Calvin/SpringBoot-Book_Store/blob/master/img-store/%E4%B9%A6%E5%9F%8E%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84.png" width="500px">
